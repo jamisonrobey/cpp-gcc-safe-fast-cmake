@@ -36,33 +36,23 @@ int main(int argc, char **argv) {
 }
 ```
 ### Results
-#### Release preset
-```bash
-cmake --preset release
-cd build-release
-hyperfine --warmup=3 "./template 1000000000"
-
-Benchmark 1: ./template 1000000000
-Time (mean ± σ): 629.4 ms ± 0.6 ms [User: 625.9 ms, System: 1.0 ms]
-Range (min … max): 628.7 ms … 630.4 ms 10 runs
-```
 #### -O3
 ```bash
-g++ src/main.cpp -o template -O3 -std=c++23
-hyperfine --warmup=3 "./template 1000000000"
+$ g++ src/main.cpp -o template -O3 -std=c++23
+$ hyperfine --warmup=3 "./template 1000000000"
 
 Benchmark 1: ./template 1000000000
   Time (mean ± σ):      1.111 s ±  0.005 s    [User: 1.105 s, System: 0.001 s]
   Range (min … max):    1.101 s …  1.117 s    10 runs
   ```
 
+#### Release preset
+```bash
+$ cmake --preset release
+$ cd build-release
+$ hyperfine --warmup=3 "./template 1000000000"
 
-
-
-
-
-
-
-
-
-
+Benchmark 1: ./template 1000000000
+  Time (mean ± σ): 629.4 ms ± 0.6 ms [User: 625.9 ms, System: 1.0 ms]
+  Range (min … max): 628.7 ms … 630.4 ms 10 runs
+```
