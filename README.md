@@ -12,7 +12,7 @@ unset PROJECT_NAME
 ```
 ## Requirements:
 - `gcc` 
-    - Compiled to C++23 which requires `gcc >= 15` so if needed modify `"CMAKE_CXX_STANDARD` in [`CMakePresets.json`](CMakePresets.json).
+    - Compiled to C++23 which requires `gcc >= 15` so if needed modify `CMAKE_CXX_STANDARD` in [`CMakePresets.json`](CMakePresets.json).
 - `cmake`
 - `ninja`
     -  [`CMakePresets.json`](CMakePresets.json) uses ninja as generator but you can easily change this
