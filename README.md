@@ -16,5 +16,5 @@ unset PROJECT_NAME
 - `cmake`
 - `ninja`
     -  [`CMakePresets.json`](CMakePresets.json) uses ninja as generator but you can easily change this
-- Release uses `mtune=native` and `march=native`, so if you need to distribute your binaries modify the release flags.
+- Release uses `march=native`, so if you need to distribute your binaries modify the release flags.
 - May need sanitizer runtimes for debug
