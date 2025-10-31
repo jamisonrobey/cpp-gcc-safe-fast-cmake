@@ -1,12 +1,15 @@
 # Safe + Fast minimal GCC CMake (FOR DA BOYZ / FTB FTB FTB)
 ## clone, replace project name, init git and generate `compile_commands.json`
 ```bash
-read -rp "Project name: " PROJECT_NAME
-git clone https://github.com/jamisonrobey/cpp-gcc-safe-fast-cmake.git "$PROJECT_NAME"
-cd "$PROJECT_NAME"
-sed -i "s/template/${PROJECT_NAME}/g" CMakeLists.txt
-cmake --preset debug
-echo "${PROJECT_NAME} ready — run:"
+printf "Project name: "
+read PROJECT_NAME
+git clone https://github.com/jamisonrobey/cpp-gcc-safe-fast-cmake.git "$PROJECT_NAME" && \
+cd "$PROJECT_NAME" && \
+sed -i "s/template/${PROJECT_NAME}/g" CMakeLists.txt && \
+cmake --preset debug && \
+ln -sf build-debug/compile_commands.json compile_commands.json && \
+rm -rf .git README.md && git init && \
+echo "${PROJECT_NAME} ready — run:" && \
 echo "  cmake --build build-debug"
 ```
 ## Requirements:
