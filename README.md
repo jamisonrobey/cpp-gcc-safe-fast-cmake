@@ -6,8 +6,8 @@ git clone https://github.com/jamisonrobey/cpp-gcc-safe-fast-cmake.git "$PROJECT_
 cd "$PROJECT_NAME"
 sed -i "s/template/${PROJECT_NAME}/g" CMakeLists.txt
 cmake --preset debug
-ln -sf build-debug/compile_commands.json compile_commands.json
-rm -rf .git && git init
+echo "${PROJECT_NAME} ready — run:"
+echo "  cmake --build build-debug"
 ```
 ## Requirements:
 - `gcc` 
