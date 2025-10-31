@@ -7,7 +7,7 @@ cd "$PROJECT_NAME"
 sed -i "s/template/${PROJECT_NAME}/g" CMakeLists.txt
 cmake --preset debug
 ln -sf build-debug/compile_commands.json compile_commands.json
-rm -rf .git && git init -q
+rm -rf .git && git init
 ```
 ## Requirements:
 - `gcc` 
